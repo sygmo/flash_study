@@ -1,2 +1,11 @@
-<h1>Decks#new</h1>
-<p>Find me in app/views/decks/new.html.erb</p>
+<h1>Create new flashcard deck</h1>
+
+
+<%= simple_form_for @deck do |f| %>
+	<%= f.input :title %>
+	<%= f.input :description, hint: "Optional" %>
+	<%= f.input :public, as: :radio_buttons %>
+	<%= f.button :submit %>
+<% end %>
+
+<a href="/">Cancel</a>
